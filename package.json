@@ -1,5 +1,5 @@
 {
-  "name": "js-2026-spring",
+  "name": "js",
   "scripts": {
     "build": "vite build",
     "start": "vite"

@@ -1,8 +1,8 @@
 <!-- .slide: id="lesson7" -->
 
-# JavaScript Course - Spring 2026
+# JavaScript Course - Fall 2026
 
-Lesson 7, Tuesday, 2026-04-14
+Lesson 7, Tuesday, 2026-10-13
 
 ---
 
@@ -395,7 +395,7 @@ console.log(myInfo.address.country); // "Germany"
 
 ### Bonus Practice
 
-Change the `me` objects in https://raw.githubusercontent.com/ReDI-School/js-2026-spring/main/objects/index.html
+Change the `me` objects in https://raw.githubusercontent.com/ReDI-School/js/main/objects/index.html
 
 Only change `me` object, nothing else in that file!
 

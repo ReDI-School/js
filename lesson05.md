@@ -1,8 +1,8 @@
 <!-- .slide: id="lesson5" -->
 
-# JavaScript Course - Spring 2026
+# JavaScript Course - Fall 2026
 
-Lesson 5, Tuesday, 2026-04-07
+Lesson 5, Tuesday, 2026-10-06
 
 ---
 
@@ -453,7 +453,7 @@ Owen, 30, English &#8594; **"Hello! my name is Owen, I am 30 years old and I spe
 
 ### Bonus Tasks
 
-[Here are some incomplete examples](https://github.com/ReDI-School/js-2026-spring/tree/main/functions)
+[Here are some incomplete examples](https://github.com/ReDI-School/js/tree/main/functions)
 of using functions. Copy the contents of the file into a script tag, and try
 to fix the examples so that they run correctly.
 
@@ -461,4 +461,4 @@ to fix the examples so that they run correctly.
 
 ### Bonus Bonus Tasks
 
-Want to practice more? Try solving the tasks in [index.html](https://github.com/ReDI-School/js-2026-spring/tree/main/functions)
+Want to practice more? Try solving the tasks in [index.html](https://github.com/ReDI-School/js/tree/main/functions)
