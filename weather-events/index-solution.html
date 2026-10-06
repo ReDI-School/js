@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Events - If Statement Solutions</title>
+</head>
+<body>
+    <h1>Weather Events: If Statement Solutions</h1>
+    <p>Right click and choose "view page source" to see the solutions.</p>
+<script>
+/*
+    Exercise 1: A single if is enough because warm weather needs no action.
+*/
+let morningTemperature = -2;
+
+if (morningTemperature < 0) {
+  console.log("Bring the potted plants indoors.");
+}
+
+/*
+    Exercise 2: if...else makes the two choices mutually exclusive.
+*/
+let trousersTemperature = 18;
+
+if (trousersTemperature < 20) {
+  console.log("Wear long trousers.");
+} else {
+  console.log("Wear shorts.");
+}
+
+/*
+    Exercise 3: if...else if checks the specific conditions in order.
+    Above 21°C, neither condition matches, so no jacket is suggested.
+*/
+let coatTemperature = 15;
+
+if (coatTemperature < 0) {
+  console.log("Wear a heavy down parka.");
+} else if (coatTemperature <= 21) {
+  console.log("Wear a medium jacket.");
+}
+
+/*
+    Exercise 4: if...else if...else covers every possible temperature.
+*/
+let drinkTemperature = 32;
+
+if (drinkTemperature > 30) {
+  console.log("Serve iced lemonade.");
+} else if (drinkTemperature >= 20) {
+  console.log("Serve cool water.");
+} else {
+  console.log("Serve hot tea.");
+}
+</script>
+</body>
+</html>

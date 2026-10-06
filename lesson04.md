@@ -392,9 +392,10 @@ let butterPrice = 1;
 
 ### Homework
 
-You're a developer in a bookstore. Can you finish all the tasks in this JavaScript project?
+Practice using conditional statements to make decisions in these weather scenarios.
 
-- [index.html](bookstore/index.html)
+- [Weather events homework](weather-events/index.html)
+- [Weather events solution](weather-events/index-solution.html)
 
 ---
 
