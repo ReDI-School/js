@@ -14,6 +14,7 @@ export default defineConfig({
         { src: "functions", dest: "." },
         { src: "objects", dest: "." },
         { src: "project", dest: "." },
+        { src: "weather-events", dest: "." },
       ],
     }),
   ],
