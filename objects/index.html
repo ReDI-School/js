@@ -41,20 +41,9 @@
 
     /*
     change the `me` object so a caller can write
-    `me.address[0].city` to obtain the value "Berlin".
+    `me.address().city` to obtain the value "Berlin".
     */
     function object3() {
-      let me = {
-
-      };
-      return me;
-    }
-
-    /*
-    change the `me` object so a caller can write
-    `me.address()[0].city` to obtain the value "Berlin".
-    */
-    function object4() {
       let me = {
 
       };
@@ -102,26 +91,13 @@
       it("Returns an object", function () {
         expect(object3()).to.be.an('object');
       });
-      it("Has address array property", function () {
-        expect(object3()).to.have.property('address');
-        expect(object3().address).to.be.be.an('array');
-      });
-      it("City should be Berlin", function () {
-        expect(object3().address[0].city).to.equal("Berlin");
-      });
-    });
-
-    describe("object4", function () {
-      it("Returns an object", function () {
-        expect(object4()).to.be.an('object');
-      });
       it("Has address member function", function () {
-        expect(object4()).to.have.property('address');
-        expect(object4().address).to.be.be.a('function');
-        expect(object4().address()).to.be.be.an('array');
+        expect(object3()).to.have.property('address');
+        expect(object3().address).to.be.be.a('function');
+        expect(object3().address()).to.be.be.an('object');
       });
       it("City should be Berlin", function () {
-        expect(object4().address()[0].city).to.equal("Berlin");
+        expect(object3().address().city).to.equal("Berlin");
       });
     });
 
