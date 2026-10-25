@@ -98,3 +98,12 @@ Using JavaScript, perform the appropriate operation (addition or subtraction) ba
 Display the result in the designated div.
 
 ![calculator](images/calculator.png) <!-- .element height="300px" width="500px" -->
+
+---
+
+### Homework
+
+Practice using DOM manipulation techniques to make the following HTML page more dynamic.
+
+- [DOM manipulation homework](theme-and-info-switcher/index.html)
+- [DOM manipulation solution](theme-and-info-switcher/index-solution.html)

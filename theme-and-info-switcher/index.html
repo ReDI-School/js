@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice - Exercise</title>
+
+    <style>
+        /* ========================================================== */
+        /* 🛑 PAGE STYLING & LAYOUT (Students: Don't worry about this!) */
+        /* ========================================================== */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #fafafa;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #111;
+            text-align: center;
+        }
+
+        .exercise-section {
+            background: #ffffff;
+            padding: 24px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .exercise-section h2 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 30px 0;
+        }
+
+        button {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .clickable-word {
+            color: #0066cc;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .animal-display {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .animal-display img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #e5e5e5;
+            background: #f0f0f0;
+        }
+
+        #answer-box {
+            margin-top: 10px;
+            font-weight: 500;
+            color: #008040;
+            margin-bottom: 0;
+        }
+
+        .exercise-title {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+
+        .exercise-text {
+            margin-bottom: 0;
+        }
+
+
+        /* ========================================================== */
+        /* ✅ EXERCISE-SPECIFIC CSS */
+        /* ========================================================== */
+        .card {
+            background-color: #ffffff;
+            color: #111;
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .card.dark-mode {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            border-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DOM Manipulation Practice</h1>
+
+    <!-- ================= EXERCISE 1 ================= -->
+    <div class="exercise-section">
+        <h2>Exercise 1: Animal Info Reveal</h2>
+        <p>
+            My favorite animals are the
+            <span class="clickable-word" onclick="showPanda()">Panda</span>, the
+            <span class="clickable-word" onclick="showElephant()">Elephant</span>, and the
+            <span class="clickable-word" onclick="showLion()">Lion</span>.
+        </p>
+
+        <div class="animal-display">
+            <img id="animal-image" src="animals.jpg" alt="Animal" width="200" height="200">
+            <p id="animal-description">Click an animal above to learn about it.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ================= EXERCISE 2 ================= -->
+    <div class="exercise-section">
+        <h2>Exercise 2: Status Switcher</h2>
+        <p id="status-text">Status: Offline 💤</p>
+        <button onclick="toggleStatus()">Toggle Status</button>
+    </div>
+
+    <hr>
+
+    <!-- ================= EXERCISE 3 ================= -->
+    <div class="exercise-section">
+        <h2>Exercise 3: Riddle Revealer</h2>
+        <p>What has to be broken before you can use it?</p>
+        <button onclick="revealAnswer()">Show Answer</button>
+        <p id="answer-box"></p>
+    </div>
+
+    <hr>
+
+    <!-- ================= EXERCISE 4 ================= -->
+    <div class="exercise-section">
+        <h2>Exercise 4: Theme Switcher</h2>
+        <div id="box" class="card">
+            <h3 id="box-title" class="exercise-title">Light Mode</h3>
+            <p class="exercise-text">This container switches themes cleanly using CSS classes.</p>
+        </div>
+        <button onclick="toggleMode()">Toggle Theme</button>
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        // --- Exercise 1 Functions ---
+        function showPanda() {
+            // TODO: Get the animal image element and change its .src to "panda.jpg"
+            // TODO: Get the animal description element and change its .textContent
+        }
+
+        function showElephant() {
+            // TODO: Get the animal image element and change its .src to "elephant.jpg"
+            // TODO: Get the animal description element and change its .textContent
+        }
+
+        function showLion() {
+            // TODO: Get the animal image element and change its .src to "lion.jpg"
+            // TODO: Get the animal description element and change its .textContent
+        }
+
+
+        // --- Exercise 2 Function ---
+        function toggleStatus() {
+            // TODO: Get the status paragraph element using its ID ("status-text")
+            // TODO: Write an if/else statement.
+            // If the textContent is "Status: Offline 💤", change it to "Status: Online 🟢 Coding!"
+            // Otherwise, change it back to "Status: Offline 💤"
+        }
+
+
+        // --- Exercise 3 Function ---
+        function revealAnswer() {
+            // TODO: Get the answer box element and set its .textContent to reveal the answer!
+        }
+
+
+        // --- Exercise 4 Function (Bonus / New Concept!) ---
+        function toggleMode() {
+            let box = document.getElementById("box");
+            let title = document.getElementById("box-title");
+
+            /*
+                  💡 NEW CONCEPT EXPLANATION:
+                  Instead of changing individual inline styles (like box.style.backgroundColor),
+                  professional web development uses CSS classes to handle styling themes.
+
+                  NOTE FOR STUDENTS:
+                  We use .className here instead of .class because "class" is a reserved
+                  keyword in JavaScript (used for creating object classes).
+
+                  Also, while overwriting strings with .className works using the basics
+                  we already know, please note this is NOT the most optimal or idiomatic
+                  way to solve this in professional development (classList.toggle is preferred!).
+                */
+
+            // Check if we are currently in light mode (only has the "card" class)
+            if (box.className === "card") {
+                // Overwrite className to include both "card" and "dark-mode" (make it dark)
+                box.className = "card dark-mode";
+                title.textContent = "Dark Mode";
+            } else {
+                // Otherwise, we are in dark mode, so go back to light mode
+                box.className = "card";
+                title.textContent = "Light Mode";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

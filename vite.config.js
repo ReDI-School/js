@@ -15,6 +15,7 @@ export default defineConfig({
         { src: "objects", dest: "." },
         { src: "project", dest: "." },
         { src: "weather-events", dest: "." },
+        { src: "theme-and-info-switcher", dest: "." },
       ],
     }),
   ],
