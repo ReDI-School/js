@@ -110,8 +110,8 @@ JSON:
 
 There are a lot of services on the internet that transfer data via JSON.
 
-Example: https://restcountries.com/v3.1/lang/spanish
-Documentation: https://restcountries.com/
+Example: https://studies.cs.helsinki.fi/restcountries/api/name/spain
+Documentation: https://studies.cs.helsinki.fi/restcountries/
 
 Find more at https://apilist.fun, https://rapidapi.com/hub or https://apis.guru
 
@@ -202,7 +202,7 @@ We can use the `await` keyword to wait for the result of an asynchronous functio
 
 ```js
 async function main() {
-  let response = await fetch("https://restcountries.com/v3.1/lang/spanish");
+  let response = await fetch("https://studies.cs.helsinki.fi/restcountries/api/name/spain");
   let data = await response.json();
   console.log(data);
 }
@@ -212,7 +212,7 @@ async function main() {
 
 ### Tasks
 
-1. Download the data from https://restcountries.com/v3.1/name/deutschland (or any country you like) in JavaScript and log the response to console
+1. Download the data from https://studies.cs.helsinki.fi/restcountries/api/name/germany (or any country you like, use its English name) in JavaScript and log the response to console
 1. Create a web page that displays the country's official name, its area and its population
 1. Bonus: Show the capital cities
 1. Bonus: Display the flag and the coat of arms of the country as SVG file. (Hint: use `img` element and set the `src` attribute).
@@ -224,8 +224,8 @@ async function main() {
 ### More Bonus
 
 1. Add an input field and a button to your page. When the user clicks the button, show the details about the country that the user entered in the input field.
-1. Sometimes, more than one country can be returned. Try entering "united" in your input field. Extend your web page to show _all_ countries that match the user's input.
-1. Show all the bordering countries (field: `borders`) as buttons. Example: Germany has a neighbour called `AUT`. Create a button with text content `AUT` and when the user clicks the button, the page should display information about this country (hint: use the `alpha` API, e.g: https://restcountries.com/v3.1/alpha/aut)
+1. Show _all_ countries whose name contains the user's input. Example: "united" should show the United Kingdom, the United States, etc. (hint: download all countries from https://studies.cs.helsinki.fi/restcountries/api/all and use `filter`)
+1. Show all the bordering countries (field: `borders`) as buttons. Example: Germany has a neighbour called `AUT`. Create a button with text content `AUT` and when the user clicks the button, the page should display information about this country (hint: in the list from `/all`, find the country whose `cca3` field is `AUT`)
 
 <!-- .slide: style="font-size:80%" -->
 
