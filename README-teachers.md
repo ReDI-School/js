@@ -14,25 +14,9 @@
 
 # How to test your lesson on your computer
 
-## With node
+Run `npm run start -- --host 127.0.0.1`
 
-Run a local http server in this directory, e.g.:
-
-```sh
-npx serve
-```
-
-Then open http://localhost:5000 in your favorite browser.
-
-## With python3
-
-Run the following python command:
-
-```sh
-python3 -m http.server
-```
-
-Then open http://localhost:8000 in your favorite browser.
+Then open `http://127.0.0.1:5173/` in your browser.
 
 # Other contributions
 
