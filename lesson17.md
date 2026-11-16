@@ -14,6 +14,7 @@ Give and receive feedback, with help from AI tools.
 
 ### Recap: Lesson 16
 
+- Final project: define an MVP and break it into tasks
 - Peer review: examine each other's work to catch bugs and improve quality
 - Self-review first: read your code as if for the first time
 - Ask: clear to teammates? clear in 6 months? does what it should?
