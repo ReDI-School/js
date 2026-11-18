@@ -7,15 +7,7 @@ Lesson 17, Tuesday, 2026-11-24
 ---
 
 # Peer Review
-#### Reviewing others, reviewing yourself, and AI as a second reviewer
-
----
-
-### Recap: Lesson 16
-
-- Final project: 1–3 people
-- Deliverables: JS solution, 5-min presentation, live demo
-- Planning: weekly task breakdown for your MVP (nice-to-haves last)
+#### Reviewing other people's code, your own code, and AI as a second reviewer
 
 ---
 
@@ -30,15 +22,25 @@ After this lesson you can:
 
 ---
 
-### Agenda
+### How we work today: the chat
 
-- Warm-up: review code cold (10 min)
-- Part 1: Peer review (35 min)
-- Exercise 1: review a classmate's project (25 min)
-- Break
-- Part 2: Self-review (15 min)
-- Part 3: AI as a second reviewer (25 min)
-- Wrap-up (10 min)
+- Everything today happens in the Zoom chat
+- When I ask a question, type your answer but **do not press Enter yet**
+- When I say "go", everyone sends at once
+- This way you think for yourself before you see other answers
+
+---
+
+### Agenda (50 min)
+
+- Warm-up: review code cold (5 min)
+- Peer review: what to look for, how to comment (18 min)
+- Exercise: review a snippet in the chat (10 min)
+- Self-review (5 min)
+- AI as a second reviewer (6 min)
+- Wrap-up (3 min)
+
+Note: Recap of Lesson 16 is skipped. Show the final project deliverables only if students ask.
 
 ---
 
@@ -56,17 +58,9 @@ No theory yet. Just read and react.
 
 Look at this code. What would you tell the author?
 
-Take 1 minute alone, then 1 minute with your neighbour.
+Type your feedback in the chat, but don't press Enter yet. (1 min)
 
-```js
-let n = 3;
-let p = 8;
-console.log(n * p);
-```
-
----
-
-Same question. Does the output look right?
+Then "go": everyone sends.
 
 ```js
 let numFriends = 2;
@@ -82,21 +76,17 @@ Reveal: the bug is hidden by a coincidence
 - `2 ** 2` and `2 * 2` are both `4`
 - The output looks correct, the code is wrong
 - Try `numFriends = 3` and you will see it
-- Lesson: "it runs" is not the same as "it is right"
+- "It runs" is not the same as "it is right"
+
+You just did a peer review.
 
 ---
 
 <!-- .slide: id="peer-review" -->
 
-# Part 1: Peer Review
-
----
-
-### What is peer review?
+# Peer Review
 
 One or more people examine the work of someone else, usually before the code is considered ready.
-
-You just did it: you read code you did not write and said something about it.
 
 ---
 
@@ -104,8 +94,7 @@ You just did it: you read code you did not write and said something about it.
 
 - Catches bugs early, when they are cheap to fix
 - Improves clarity and maintainability
-- Spreads knowledge: you learn from other people's code
-- Builds team communication
+- Spreads knowledge and builds team communication
 - It is _not_ just about finding mistakes
 
 ---
@@ -116,13 +105,12 @@ In this order:
 
 1. Correctness: does it do what it should?
 2. Edge cases: what if the input is empty, zero, or missing?
-3. Design: is the structure sensible?
-4. Readability: names, comments, simplicity
-5. Style nitpicks (spacing, quotes) come last
+3. Readability: names, simplicity
+4. Style nitpicks (spacing, quotes) come last
 
 ---
 
-Which of the 5 levels is this? Discuss in pairs.
+Which level is this? Type 1, 2, 3 or 4 in the chat, then "go".
 
 ```js
 let items = [10, 20, 30];
@@ -143,26 +131,7 @@ Level 1, correctness: an off-by-one bug
 
 ---
 
-Which level is this?
-
-```js
-let status = "active";
-if (status = "inactive") {
-  console.log("User is inactive");
-}
-```
-
----
-
-Level 1, correctness: `=` assigns, `===` compares
-
-- The condition assigns `"inactive"`, a non-empty string
-- A non-empty string is truthy, so the `if` always runs
-- Fix: `status === "inactive"`
-
----
-
-Which level is this?
+Which level is this? Type 1, 2, 3 or 4 in the chat, then "go".
 
 ```js
 function average(numbers) {
@@ -184,7 +153,7 @@ Level 2, edge cases: what if `numbers` is empty?
 
 ---
 
-Which level is this?
+Which level is this? Type 1, 2, 3 or 4 in the chat, then "go".
 
 ```js
 function f(x) {
@@ -194,11 +163,10 @@ function f(x) {
 
 ---
 
-Level 4, readability
+Level 3, readability
 
 - Unclear name: what does `f` do?
 - Magic number: what is `0.9`?
-- Suggestion: `applyDiscount(price)` with a named rate
 
 ```js
 let DISCOUNT_RATE = 0.9;
@@ -207,32 +175,6 @@ function applyDiscount(price) {
   return price * DISCOUNT_RATE;
 }
 ```
-
----
-
-Which level is this?
-
-```js
-function isUserActive(user) {
-  if (user.isDeleted === true) {
-    return false;
-  } else {
-    return true;
-  }
-}
-```
-
----
-
-Levels 3 and 4: it works, but it can be simpler
-
-```js
-function isUserActive(user) {
-  return user.isDeleted !== true;
-}
-```
-
-Also a good question for the author: can `isDeleted` be missing?
 
 ---
 
@@ -253,7 +195,6 @@ Bad comment vs good comment
 |---|---|
 | "You always write unclear code." | "I did not understand what `f` does. Would `applyDiscount` be clearer?" |
 | "This is wrong." | "If `numbers` is empty this returns `NaN`. What should happen then?" |
-| "Why didn't you use `===`?" | "`=` assigns here, so the `if` always runs. Did you mean `===`?" |
 
 ---
 
@@ -261,7 +202,9 @@ Your turn: rewrite this comment
 
 > "This loop is a mess, fix it."
 
-Take 2 minutes. Then compare with your neighbour.
+Type your better version in the chat (1 min), then "go".
+
+I will pick two and we improve them together.
 
 ---
 
@@ -269,74 +212,75 @@ Take 2 minutes. Then compare with your neighbour.
 
 - Let go of ownership: the code is the team's, not yours
 - Do not defend, first understand the question
-- For every comment, answer with one of three:
+- Answer every comment with one of three:
   - **Keep**: "I'll leave it, because..."
   - **Change**: "Good catch, fixed."
   - **Ask**: "Can you explain what you mean?"
 
 ---
 
-<!-- .slide: id="exercise-1" -->
+<!-- .slide: id="exercise" -->
 
-### Exercise 1: review a real project
+### Exercise, step 1: be the reviewer (5 min)
 
-In pairs, swap code from your final project (or an earlier task).
+Review this code. No AI. Write 2 review comments in the chat: use the levels and the good-comment rules. Don't press Enter yet.
 
-1. Read your partner's code, no AI yet
-2. Write 3 review comments: use the 5 levels and the good-comment rules
-3. Swap back: the author answers each comment with keep, change, or ask
-4. Talk about one comment that surprised you
+```js
+function countEven(numbers) {
+  let count = 0;
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      count = count + 1;
+    }
+  }
+}
+```
 
 ---
 
-# Break Time!
+Exercise, step 1: "go", send your comments
+
+I will read some aloud. Listen for: is it specific, about the code, and respectful?
+
+---
+
+Reveal: two bugs, both level 1
+
+- `i` starts at `1`, so the first number is never checked
+- There is no `return`, so the function gives back `undefined`
+
+---
+
+### Exercise, step 2: be the author (4 min)
+
+You wrote `countEven`. A reviewer gave you this comment:
+
+> "Does the loop skip the first element? I think `i` should start at `0`."
+
+Answer in the chat with **keep**, **change**, or **ask**, plus one sentence. Then "go".
 
 ---
 
 <!-- .slide: id="self-review" -->
 
-# Part 2: Self-Review
+# Self-review
 
 ---
 
 ### Self-review is peer review, aimed at yourself
 
-You now know what a reviewer looks for.
 Before you hand over your code, be your own first reviewer.
 
-It saves time for others, and it catches the embarrassing mistakes.
-
----
-
-Use the same 5 levels on your own code:
-
-1. Correctness: does it actually do what I think it does?
-2. Edge cases: empty, zero, missing input?
-3. Design: is the structure sensible?
-4. Readability: would a teammate understand this?
-5. Style: last
-
-And one extra question: would I understand this in 6 months?
-
----
-
-Why is self-review harder?
-
+- Use the same levels: correctness, edge cases, readability, style
 - You see what you meant, not what you wrote
-- You know the context, the reader does not
-
----
-
-Habits that help
-
-- Take a break before reviewing
-- Read your git diff before you share it
-- Rubber ducking: explain the code out loud, line by line
 - Test with the boring inputs: `0`, `[]`, `undefined`
+- Take a break first, and explain the code out loud (rubber ducking)
 
 ---
 
-Try it: self-review this code in 2 minutes
+Try it: self-review this code in 1 minute
+
+Type your findings in the chat, then "go".
 
 ```js
 function findMax(numbers) {
@@ -364,34 +308,24 @@ Reveal
 
 <!-- .slide: id="ai-review" -->
 
-# Part 3: AI as a Second Reviewer
+# AI as a second reviewer
 
 ---
 
 ### Human first, then AI
 
-- Do your own review first (peer or self)
+- Do your own review first
 - Then ask AI, and compare
 - If AI goes first, you stop thinking and start agreeing
 
 ---
 
-### What AI is good at
+### Use it, and check it
 
-- Spotting common bugs and code smells
-- Suggesting simpler versions
-- Offering alternatives you did not think of
-- Helping with the tone of a comment
+- Good at: common bugs, simpler versions, alternatives, tone of a comment
+- Not good at: knowing your intent, and it can sound confident and be wrong
 
----
-
-### What AI is not good at
-
-- Knowing your intent and your project's context
-- Knowing what your teacher or team expects
-- Being right: it can sound confident and be wrong
-
-You are the reviewer. AI is a second opinion.
+You are the reviewer. AI is a second opinion. Sort each AI point into keep, change, or ask.
 
 ---
 
@@ -399,51 +333,32 @@ You are the reviewer. AI is a second opinion.
 
 - "If I submitted this to a code review, what would be the top 3 concerns?"
 - "What edge cases does this function not handle?"
-- "How would you improve this function for clarity?"
 - "Is this comment polite and specific? Suggest a better wording."
 
 ---
 
-### Exercise 2: compare yourself with AI
+### Homework
 
-1. Take the code you reviewed in Exercise 1 (or your own code)
-2. Write down your own findings first
+Use code from your final project:
+
+1. Swap code with a teammate (or a classmate in the course chat) and review each other's code: 2 comments, keep / change / ask
+2. Self-review your own code and write down your findings first
 3. Ask AI for a review
-4. Sort every AI point: **keep**, **change**, or **ask**
-5. Answer: what did AI catch that you missed? What did you catch that AI missed?
-
----
-
-### Layers of review
-
-No single check catches everything.
-
-- Self-review
-- Running and testing the code
-- Peer review
-- AI as a second opinion
-
-Each layer catches different problems. They add up, they do not replace each other.
+4. Note: what did AI catch that you missed? What did you catch that AI missed?
 
 ---
 
 <!-- .slide: id="wrap-up" -->
 
-### Wrap-up: show what you learned
+### Wrap-up (3 min)
 
-On a piece of paper or in the chat:
+Different checks catch different problems: self-review, testing, peer review, AI. They add up, they do not replace each other.
 
-1. Write 2 review comments about a snippet we saw today
-2. Swap with a partner: is each comment specific, about the code, and respectful?
-3. Write one sentence: "In my final project I will review ___ before I share it."
+Last question. Type your answer in the chat, then "go":
 
----
+**What is the one thing you will check in your own code before you share it?**
 
-### Reflect as a group
-
-- Which review level did you miss most often?
-- Did AI surprise you? Where was it wrong?
-- Was it harder to review yourself or someone else?
+Examples: empty inputs, loop start and end, unclear names, magic numbers.
 
 ---
 
