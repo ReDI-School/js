@@ -86,7 +86,7 @@ You just did a peer review.
 
 # Peer Review
 
-One or more people examine the work of someone else, usually before the code is considered ready.
+Someone else reads your code before it counts as ready.
 
 ---
 
