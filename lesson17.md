@@ -92,10 +92,10 @@ One or more people examine the work of someone else, usually before the code is 
 
 ### Why peer review?
 
-- Catches bugs early, when they are cheap to fix
-- Improves clarity and maintainability
-- Spreads knowledge and builds team communication
-- It is _not_ just about finding mistakes
+- **Cost**: bugs found early are cheap
+- **Quality**: clearer, maintainable code
+- **Culture**: knowledge spreads
+- **Mindset**: we learn from each other
 
 ---
 
