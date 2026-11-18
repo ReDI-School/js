@@ -146,7 +146,8 @@ Ideas that were shortened or taken out of `lesson16.md`, grouped by slide.
 - Attendance and presentation in the Class Demo Day are required to receive your course certificate
 - Deadline to submit your final project: **1 minute before** your Online Class Demo Day, to Google Drive (will be shared by the ReDI Team)
 
-## On-Site Demo Day
+## On-Site Demo Day – Dec 11th
+- The in-person event in Hamburg takes place on Dec 11th, the day after the Online Class Demo Day (Dec 10th)
 - Attendance at the in-person Demo Day in Hamburg is required for learners located in Hamburg
 - ReDI selects one person to present
 - Earlier wording, replaced: "Are you located in Hamburg? You can present at the in-person Demo Day" and "Students or groups need to nominate themselves" – self-nomination is no longer on the slide; confirm whether it still applies

@@ -279,7 +279,7 @@ The real underground venues guide
 - **Launch session:** this session
 - **Work sessions:** project work only, attendance mandatory
 - **Online Class Demo Day:** Dec 10th
-- **On-site Demo Day:** required for learners in Hamburg
+- **On-site Demo Day:** Dec 11th, required for learners in Hamburg
 
 ---
 
@@ -292,8 +292,9 @@ The real underground venues guide
 
 ---
 
-### On-Site Demo Day
+### On-Site Demo Day – Dec 11th
 
+- **Where:** in person, Hamburg
 - **Who:** all learners in Hamburg – attendance required
 - **Presenter:** one person, selected by ReDI
 - **Format:** booth talks, 5-10 minutes, several times
