@@ -6,43 +6,150 @@ Lesson 17, Tuesday, 2026-11-24
 
 ---
 
-# AI Assisted Review
+# Peer Review & AI Assisted Review
 
-Give and receive feedback, with help from AI tools.
+Give and receive feedback, with and without help from AI tools.
 
 ---
 
 ### Recap: Lesson 16
 
-- Final project: define an MVP and break it into tasks
-- Peer review: examine each other's work to catch bugs and improve quality
-- Self-review first: read your code as if for the first time
-- Ask: clear to teammates? clear in 6 months? does what it should?
-- Good habits: take a break, rubber ducking, git diffs
-- It is _not_ just about finding mistakes
+- Final project: individual or team of 2-3 people
+- Requirements: a JavaScript solution, a 5-minute presentation and a live demo
+- Define an MVP and break it into tasks, week by week
+- Nice-to-have features come only after the essentials work
 
 ---
 
 ### Today's objective
 
+- Understand what peer review is and why it matters
 - Use AI to review your own work
 - Review someone else's work with empathy
 - Write clear, constructive feedback
 
 ---
 
+> this is a new lesson format we are experimenting with this semester, feedback welcome!
+
+---
+
 ### Agenda
 
-- Part 1: Reviewing your own work with AI
+- Part 1: Peer review and self-review
+- Part 2: Reviewing your own work with AI
 - Break
-- Part 2: Reviewing someone else's work
+- Part 3: Reviewing someone else's work
 - Wrap-up
+
+---
+
+<!-- .slide: id="peer-review" -->
+
+# Part 1: Peer Review
+
+One or more people examine the work of someone else. Usually happens in teams before considering the code to be ready.
+
+---
+
+### Why peer review?
+
+- Helps catch bugs early on
+- Improves code quality, reliability, and maintainability
+- Enhances learning through feedback
+- Promotes team collaboration and communication
+- It is _not_ just about finding mistakes
+
+---
+
+### How to do it right
+
+- Review code for clarity, not just bugs
+- Suggest improvements, don’t just criticize
+- Ask questions if unclear about logic
+
+---
+
+Give your feedback on this code:
+
+```js
+let n = 3;
+let p = 8;
+console.log(n * p);
+```
+
+Variable names could be better
+
+<!-- .element: class="fragment" -->
+
+---
+
+Give your feedback on this code:
+
+```js
+let numFriends = 2;
+let ticketPrice = 2;
+let totalPrice = numFriends ** ticketPrice;
+console.log(totalPrice); // output is 4
+```
+
+There is a bug, it should be `*`, not `**`
+
+<!-- .element: class="fragment" -->
+
+---
+
+Give your feedback on this code:
+
+```js
+function isUserActive(user) {
+  if (user.isDeleted === true) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+let userActive = isUserActive(user);
+```
+
+It can be simpler: `let userActive = !user.isDeleted`
+
+<!-- .element: class="fragment" -->
+
+---
+
+### Self-Review
+
+before peer review, always look at your code with a critical eye before considering it ready, it saves time for others, and it helps make the code easier to understand.
+
+---
+
+Ask yourself the following questions:
+
+- Would my teammates understand this?
+- Would I understand this if I came back to it in 6 months?
+- Does this do what it is supposed to do? Does it actually do what i think it does?
+
+---
+
+Some good habits:
+
+- Take a break before reviewing
+- Git diffs / Pull requests
+- Rubber ducking
 
 ---
 
 <!-- .slide: id="self-review-ai" -->
 
-# Part 1: Reviewing Your Own Work
+# Part 2: Reviewing Your Own Work with AI
+
+---
+
+### AI Tools
+
+You can use AI tools to help you do the review, but you need to _ask the right questions_, and _think critically about the output._
 
 ---
 
@@ -62,13 +169,19 @@ Give and receive feedback, with help from AI tools.
 
 ---
 
+### Demo with ChatGPT
+
+---
+
 ### Exercise 1
 
-Submit your own work for AI review
+Submit your own work for AI review, for example some of your code from previous tasks
 
 - Critique your code or design with AI
+- What did it say? Does it make sense?
+- Do you know if it's better? Why?
 - Reflect: what did AI catch that you didn't?
-- Optional: revise based on feedback
+- Optional: revise and adapt your code based on feedback
 
 ---
 
@@ -78,7 +191,7 @@ Submit your own work for AI review
 
 <!-- .slide: id="reviewing-others" -->
 
-# Part 2: Reviewing Someone Else's Work
+# Part 3: Reviewing Someone Else's Work
 
 ---
 
