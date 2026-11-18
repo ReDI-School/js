@@ -6,71 +6,57 @@ Lesson 17, Tuesday, 2026-11-24
 
 ---
 
-# Peer Review & AI Assisted Review
-
-Give and receive feedback, with and without help from AI tools.
+# Peer Review
+#### Reviewing others, reviewing yourself, and AI as a second reviewer
 
 ---
 
 ### Recap: Lesson 16
 
-- Final project: individual or team of 2-3 people
-- Requirements: a JavaScript solution, a 5-minute presentation and a live demo
-- Define an MVP and break it into tasks, week by week
-- Nice-to-have features come only after the essentials work
+- Final project: 1–3 people
+- Deliverables: JS solution, 5-min presentation, live demo
+- Planning: weekly task breakdown for your MVP (nice-to-haves last)
 
 ---
 
 ### Today's objective
 
-- Understand what peer review is and why it matters
-- Use AI to review your own work
-- Review someone else's work with empathy
-- Write clear, constructive feedback
+After this lesson you can:
 
----
-
-> this is a new lesson format we are experimenting with this semester, feedback welcome!
+- Give a clear, constructive review comment on someone else's code
+- Receive a review and respond: keep, change, or ask
+- Apply the same checks to your own code
+- Use AI as a second reviewer, without letting it think for you
 
 ---
 
 ### Agenda
 
-- Part 1: Peer review and self-review
-- Part 2: Reviewing your own work with AI
+- Warm-up: review code cold (10 min)
+- Part 1: Peer review (35 min)
+- Exercise 1: review a classmate's project (25 min)
 - Break
-- Part 3: Reviewing someone else's work
-- Wrap-up
+- Part 2: Self-review (15 min)
+- Part 3: AI as a second reviewer (25 min)
+- Wrap-up (10 min)
 
 ---
 
-<!-- .slide: id="peer-review" -->
-
-# Part 1: Peer Review
-
-One or more people examine the work of someone else. Usually happens in teams before considering the code to be ready.
+> This is a new lesson format we are experimenting with this semester, feedback welcome!
 
 ---
 
-### Why peer review?
+<!-- .slide: id="warm-up" -->
 
-- Helps catch bugs early on
-- Improves code quality, reliability, and maintainability
-- Enhances learning through feedback
-- Promotes team collaboration and communication
-- It is _not_ just about finding mistakes
+# Warm-up
+
+No theory yet. Just read and react.
 
 ---
 
-### How to do it right
+Look at this code. What would you tell the author?
 
-- Review code for clarity, not just bugs
-- Suggest improvements, don’t just criticize
-- Ask questions if unclear about logic
-
----
-
-Give your feedback on this code:
+Take 1 minute alone, then 1 minute with your neighbour.
 
 ```js
 let n = 3;
@@ -78,13 +64,9 @@ let p = 8;
 console.log(n * p);
 ```
 
-Variable names could be better
-
-<!-- .element: class="fragment" -->
-
 ---
 
-Give your feedback on this code:
+Same question. Does the output look right?
 
 ```js
 let numFriends = 2;
@@ -93,13 +75,142 @@ let totalPrice = numFriends ** ticketPrice;
 console.log(totalPrice); // output is 4
 ```
 
-There is a bug, it should be `*`, not `**`
+---
 
-<!-- .element: class="fragment" -->
+Reveal: the bug is hidden by a coincidence
+
+- `2 ** 2` and `2 * 2` are both `4`
+- The output looks correct, the code is wrong
+- Try `numFriends = 3` and you will see it
+- Lesson: "it runs" is not the same as "it is right"
 
 ---
 
-Give your feedback on this code:
+<!-- .slide: id="peer-review" -->
+
+# Part 1: Peer Review
+
+---
+
+### What is peer review?
+
+One or more people examine the work of someone else, usually before the code is considered ready.
+
+You just did it: you read code you did not write and said something about it.
+
+---
+
+### Why peer review?
+
+- Catches bugs early, when they are cheap to fix
+- Improves clarity and maintainability
+- Spreads knowledge: you learn from other people's code
+- Builds team communication
+- It is _not_ just about finding mistakes
+
+---
+
+### What do reviewers look at?
+
+In this order:
+
+1. Correctness: does it do what it should?
+2. Edge cases: what if the input is empty, zero, or missing?
+3. Design: is the structure sensible?
+4. Readability: names, comments, simplicity
+5. Style nitpicks (spacing, quotes) come last
+
+---
+
+Which of the 5 levels is this? Discuss in pairs.
+
+```js
+let items = [10, 20, 30];
+let total = 0;
+for (let i = 0; i <= items.length; i++) {
+  total = total + items[i];
+}
+console.log(total); // NaN
+```
+
+---
+
+Level 1, correctness: an off-by-one bug
+
+- `i <= items.length` goes one step too far
+- `items[3]` is `undefined`, and `30 + undefined` is `NaN`
+- Fix: `i < items.length`
+
+---
+
+Which level is this?
+
+```js
+let status = "active";
+if (status = "inactive") {
+  console.log("User is inactive");
+}
+```
+
+---
+
+Level 1, correctness: `=` assigns, `===` compares
+
+- The condition assigns `"inactive"`, a non-empty string
+- A non-empty string is truthy, so the `if` always runs
+- Fix: `status === "inactive"`
+
+---
+
+Which level is this?
+
+```js
+function average(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  return sum / numbers.length;
+}
+```
+
+---
+
+Level 2, edge cases: what if `numbers` is empty?
+
+- `0 / 0` is `NaN`
+- Do not just "fix" it: ask the author what the expected result is
+- A question invites discussion, an order does not
+
+---
+
+Which level is this?
+
+```js
+function f(x) {
+  return x * 0.9;
+}
+```
+
+---
+
+Level 4, readability
+
+- Unclear name: what does `f` do?
+- Magic number: what is `0.9`?
+- Suggestion: `applyDiscount(price)` with a named rate
+
+```js
+let DISCOUNT_RATE = 0.9;
+
+function applyDiscount(price) {
+  return price * DISCOUNT_RATE;
+}
+```
+
+---
+
+Which level is this?
 
 ```js
 function isUserActive(user) {
@@ -109,79 +220,72 @@ function isUserActive(user) {
     return true;
   }
 }
-
-let userActive = isUserActive(user);
 ```
 
-It can be simpler: `let userActive = !user.isDeleted`
+---
 
-<!-- .element: class="fragment" -->
+Levels 3 and 4: it works, but it can be simpler
+
+```js
+function isUserActive(user) {
+  return user.isDeleted !== true;
+}
+```
+
+Also a good question for the author: can `isDeleted` be missing?
 
 ---
 
-### Self-Review
+<!-- .slide: id="good-comments" -->
 
-before peer review, always look at your code with a critical eye before considering it ready, it saves time for others, and it helps make the code easier to understand.
+### How to write a good comment
 
----
-
-Ask yourself the following questions:
-
-- Would my teammates understand this?
-- Would I understand this if I came back to it in 6 months?
-- Does this do what it is supposed to do? Does it actually do what i think it does?
+- Talk about the code, not the person
+- Be specific: point to the line, explain the effect
+- Ask questions that invite discussion
+- Suggest, don't just criticize
 
 ---
 
-Some good habits:
+Bad comment vs good comment
 
-- Take a break before reviewing
-- Git diffs / Pull requests
-- Rubber ducking
-
----
-
-<!-- .slide: id="self-review-ai" -->
-
-# Part 2: Reviewing Your Own Work with AI
+| Bad | Better |
+|---|---|
+| "You always write unclear code." | "I did not understand what `f` does. Would `applyDiscount` be clearer?" |
+| "This is wrong." | "If `numbers` is empty this returns `NaN`. What should happen then?" |
+| "Why didn't you use `===`?" | "`=` assigns here, so the `if` always runs. Did you mean `===`?" |
 
 ---
 
-### AI Tools
+Your turn: rewrite this comment
 
-You can use AI tools to help you do the review, but you need to _ask the right questions_, and _think critically about the output._
+> "This loop is a mess, fix it."
 
----
-
-### AI tools: what they do
-
-- Spot code smells / anti-patterns
-- Flag accessibility issues
-- Suggest refactors and alternatives
+Take 2 minutes. Then compare with your neighbour.
 
 ---
 
-### Using AI productively
+### Receiving feedback
 
-- Good prompts
-- Right questions
-- Critical thinking about the output
+- Let go of ownership: the code is the team's, not yours
+- Do not defend, first understand the question
+- For every comment, answer with one of three:
+  - **Keep**: "I'll leave it, because..."
+  - **Change**: "Good catch, fixed."
+  - **Ask**: "Can you explain what you mean?"
 
 ---
 
-### Demo with ChatGPT
+<!-- .slide: id="exercise-1" -->
 
----
+### Exercise 1: review a real project
 
-### Exercise 1
+In pairs, swap code from your final project (or an earlier task).
 
-Submit your own work for AI review, for example some of your code from previous tasks
-
-- Critique your code or design with AI
-- What did it say? Does it make sense?
-- Do you know if it's better? Why?
-- Reflect: what did AI catch that you didn't?
-- Optional: revise and adapt your code based on feedback
+1. Read your partner's code, no AI yet
+2. Write 3 review comments: use the 5 levels and the good-comment rules
+3. Swap back: the author answers each comment with keep, change, or ask
+4. Talk about one comment that surprised you
 
 ---
 
@@ -189,107 +293,157 @@ Submit your own work for AI review, for example some of your code from previous 
 
 ---
 
-<!-- .slide: id="reviewing-others" -->
+<!-- .slide: id="self-review" -->
 
-# Part 3: Reviewing Someone Else's Work
-
----
-
-### Why it matters
-
-- Builds communication and critical thinking
-- Ensures high work quality
-- Learn new approaches from others
+# Part 2: Self-Review
 
 ---
 
-### Best practices
+### Self-review is peer review, aimed at yourself
 
-- Work, not the person
-- Constructive and specific
-- Clarifying questions that invite discussion
-- Let go of ownership, learn to receive feedback
+You now know what a reviewer looks for.
+Before you hand over your code, be your own first reviewer.
 
----
-
-### AI as a review assistant
-
-- Summarize a snippet / proposal / PR
-- Effective prompts for others' work
-- Help with tone
-- Spot overlooked areas
-- Critical thinking about the output
+It saves time for others, and it catches the embarrassing mistakes.
 
 ---
 
-### Exercise 2
+Use the same 5 levels on your own code:
 
-Review provided snippets with AI support
+1. Correctness: does it actually do what I think it does?
+2. Edge cases: empty, zero, missing input?
+3. Design: is the structure sensible?
+4. Readability: would a teammate understand this?
+5. Style: last
 
-- Identify areas to focus on, or validate findings
-- Review comments: keep, change, ask about
-- Discuss how you would phrase feedback to a peer
+And one extra question: would I understand this in 6 months?
 
 ---
 
-Give your feedback on this code:
+Why is self-review harder?
+
+- You see what you meant, not what you wrote
+- You know the context, the reader does not
+
+---
+
+Habits that help
+
+- Take a break before reviewing
+- Read your git diff before you share it
+- Rubber ducking: explain the code out loud, line by line
+- Test with the boring inputs: `0`, `[]`, `undefined`
+
+---
+
+Try it: self-review this code in 2 minutes
 
 ```js
-function f(x) {
-  return x * 0.9;
+function findMax(numbers) {
+  let max = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
+
+console.log(findMax([-5, -2, -9])); // 0 ?
 ```
-
-Unclear name and a magic number. What is `0.9`? Maybe `applyDiscount(price)` with a named rate
-
-<!-- .element: class="fragment" -->
 
 ---
 
-Give your feedback on this code:
+Reveal
 
-```js
-let status = "active";
-if (status = "inactive") {
-  console.log("User is inactive");
-}
-```
-
-There is a bug: `=` should be `===`. The condition is always truthy
-
-<!-- .element: class="fragment" -->
+- Level 1: `max` starts at `0`, so all-negative arrays return `0`
+- Level 2: an empty array returns `0`, is that intended?
+- Fix: start with `let max = numbers[0];` and decide what happens for `[]`
 
 ---
 
-Give your feedback on this code:
+<!-- .slide: id="ai-review" -->
 
-```js
-function getFirstName(fullName) {
-  return fullName.split(" ")[0];
-}
-```
+# Part 3: AI as a Second Reviewer
 
-What if `fullName` is empty or `undefined`? No edge case handling. Ask about the expected input
+---
 
-<!-- .element: class="fragment" -->
+### Human first, then AI
+
+- Do your own review first (peer or self)
+- Then ask AI, and compare
+- If AI goes first, you stop thinking and start agreeing
+
+---
+
+### What AI is good at
+
+- Spotting common bugs and code smells
+- Suggesting simpler versions
+- Offering alternatives you did not think of
+- Helping with the tone of a comment
+
+---
+
+### What AI is not good at
+
+- Knowing your intent and your project's context
+- Knowing what your teacher or team expects
+- Being right: it can sound confident and be wrong
+
+You are the reviewer. AI is a second opinion.
 
 ---
 
 ### Prompt suggestions
 
-- "How would you improve this function for clarity and edge case handling?"
-- "What async behavior might cause bugs here?"
 - "If I submitted this to a code review, what would be the top 3 concerns?"
+- "What edge cases does this function not handle?"
+- "How would you improve this function for clarity?"
+- "Is this comment polite and specific? Suggest a better wording."
 
 ---
 
-### Wrap-up
+### Exercise 2: compare yourself with AI
 
-Reflect as a group:
+1. Take the code you reviewed in Exercise 1 (or your own code)
+2. Write down your own findings first
+3. Ask AI for a review
+4. Sort every AI point: **keep**, **change**, or **ask**
+5. Answer: what did AI catch that you missed? What did you catch that AI missed?
 
-- How do you feel about peer review?
-- Surprised by the AI's suggestions?
-- Self-review vs. reviewing others?
+---
+
+### Layers of review
+
+No single check catches everything.
+
+- Self-review
+- Running and testing the code
+- Peer review
+- AI as a second opinion
+
+Each layer catches different problems. They add up, they do not replace each other.
+
+---
+
+<!-- .slide: id="wrap-up" -->
+
+### Wrap-up: show what you learned
+
+On a piece of paper or in the chat:
+
+1. Write 2 review comments about a snippet we saw today
+2. Swap with a partner: is each comment specific, about the code, and respectful?
+3. Write one sentence: "In my final project I will review ___ before I share it."
+
+---
+
+### Reflect as a group
+
+- Which review level did you miss most often?
+- Did AI surprise you? Where was it wrong?
+- Was it harder to review yourself or someone else?
 
 ---
 
