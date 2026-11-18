@@ -352,7 +352,7 @@ Use code from your final project:
 
 ### Wrap-up (3 min)
 
-Different checks catch different problems: self-review, testing, peer review, AI. They add up, they do not replace each other.
+Different checks catch different problems: <mark>**self-review**</mark>, <mark>**testing**</mark>, <mark>**peer review**</mark>, <mark>**AI**</mark>. They add up, they do not replace each other.
 
 Last question. Type your answer in the chat, then "go":
 
