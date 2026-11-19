@@ -286,9 +286,9 @@ The real underground venues guide
 ### Online Class Demo Day – Dec 10th
 
 - **Present:** every learner, to their class
-- **Selection:** one project goes to the ReDI-wide Demo Day
+- **Selection:** one project goes to the on-site Demo Day in Hamburg
 - **Certificate:** attendance and presentation required
-- **Submit:** Google Drive (shared by the ReDI Team), 1 minute before your slot
+- **Submit:** Google Drive (shared by the ReDI Team), 1 day before class
 
 ---
 
@@ -296,7 +296,7 @@ The real underground venues guide
 
 - **Where:** in person, Hamburg
 - **Who:** all learners in Hamburg – attendance required
-- **Presenter:** one person, selected by ReDI
+- **Selection:** one project, chosen by ReDI
 - **Format:** booth talks, 5-10 minutes, several times
 - **Prep:** briefing and rehearsals from the ReDI Team
 

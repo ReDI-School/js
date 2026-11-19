@@ -138,22 +138,24 @@ Ideas that were shortened or taken out of `lesson16.md`, grouped by slide.
 - Project Launch Session: this session
 - Project Work Sessions: only project work in these sessions; attendance is still mandatory
 - Online Class Demo Day: Dec 10th (the draft slides called this the "internal presentation date")
-- On-Site Demo Day: required for learners in Hamburg (earlier wording: optional, "nominate yourself" – replaced)
+- Submission deadline: 1 day before the Online Class Demo Day
+- On-Site Demo Day: Dec 11th, required for learners in Hamburg (earlier wording: optional, "nominate yourself" – replaced)
 
 ## Online Class Demo Day – Dec 10th
 - All learners present to their class
-- One project will be selected for the ReDI-wide Demo Day
+- One project will be selected for the on-site Demo Day in Hamburg (earlier wording, replaced: "selected for the ReDI-wide Demo Day")
 - Attendance and presentation in the Class Demo Day are required to receive your course certificate
-- Deadline to submit your final project: **1 minute before** your Online Class Demo Day, to Google Drive (will be shared by the ReDI Team)
+- Deadline to submit your final project: **1 day before** the Online Class Demo Day, to Google Drive (will be shared by the ReDI Team)
+- Earlier wording, replaced: "1 minute before your Online Class Demo Day"
 
 ## On-Site Demo Day – Dec 11th
 - The in-person event in Hamburg takes place on Dec 11th, the day after the Online Class Demo Day (Dec 10th)
 - Attendance at the in-person Demo Day in Hamburg is required for learners located in Hamburg
-- ReDI selects one person to present
+- ReDI selects one project for the on-site Demo Day (earlier wording, replaced: "one person selected to present")
 - Earlier wording, replaced: "Are you located in Hamburg? You can present at the in-person Demo Day" and "Students or groups need to nominate themselves" – self-nomination is no longer on the slide; confirm whether it still applies
-- Selected projects are showcased in exhibition booths
-- The presenter gives 5–10 minute presentations to visitors at their booth, multiple times throughout the event
-- The presenter receives a briefing from the ReDI Team before the event and takes part in rehearsal sessions
+- The selected project is showcased in an exhibition booth
+- The selected project is presented in 5–10 minute talks to visitors at its booth, multiple times throughout the event
+- The team behind the selected project receives a briefing from the ReDI Team before the event and takes part in rehearsal sessions
 
 ## Let's form groups
 - You are free to work on the final project in your current study groups
