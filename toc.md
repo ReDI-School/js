@@ -8,8 +8,8 @@
 8. [DOM](#lesson9)
 9. [Loops](#lesson12)
 10. [fetch](#lesson14)
-11. [Final Project](#final)
-12. [AI Assisted Review](#lesson17)
+11. [Final Project](#lesson16)
+12. [Peer Review](#lesson17)
 
 Direct link to lessons: [1](#lesson1) [2](#lesson2) [3](#lesson3) [4](#lesson4) [5](#lesson5) [6](#lesson6) [7](#lesson7) [8](#lesson8) [9](#lesson9) [10](#lesson10) [11](#lesson11) [12](#lesson12) [13](#lesson13) [14](#lesson14) [15](#lesson15) [16](#lesson16) [17](#lesson17)
 
