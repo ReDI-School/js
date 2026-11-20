@@ -10,6 +10,30 @@
   display: block;
 }
 
+.reveal section#project-plan-prompt blockquote {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0.25em 0.5em;
+  line-height: 1.08;
+  text-align: left;
+}
+
+.reveal section#project-plan-prompt blockquote p {
+  margin: 0.2em 0;
+}
+
+.reveal section#project-plan-prompt blockquote ol,
+.reveal section#project-plan-prompt blockquote ul {
+  margin: 0.15em 0;
+  padding-left: 1.25em;
+}
+
+.reveal section#project-plan-prompt blockquote li + li {
+  margin-top: 0.18em;
+}
+
 /* remove the ugly black border around images */
 .reveal section img {
   background: none;
