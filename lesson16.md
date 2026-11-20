@@ -102,6 +102,28 @@ let result = await detector.detect("Merci common ca va?");
 
 ---
 
+<!-- .slide: id="project-plan-prompt" style="font-size: 0.56em;" -->
+
+### A prompt for a project plan
+
+> “Hi! I'm a total beginner who just learned the basics of HTML, CSS, and JavaScript. I want to build a simple browser-based **family health recording app** (like logging doctor visits, dates, medicines, and notes) to showcase my skills, and I need a realistic timeline to build it.
+>
+> Please act as a friendly coding mentor and **interview me one step at a time** (with easy multiple-choice options where helpful) before creating my plan. Keep your questions short and simple so I don't get overwhelmed.
+>
+> Please ask me about:
+>
+> 1. **My schedule & time:** How many weeks and hours I have, and how I like to work (short daily sessions vs. weekend blocks).
+> 2. **My features:** Which features are **must-haves** vs. **nice-to-haves** (give me some beginner-friendly examples to pick from, plus room for my own ideas).
+> 3. **How data is saved:** Simple options like saving in the browser (localStorage), plus a quick reminder about keeping real family medical data private if I share screenshots or demos.
+>
+> Once I answer, please create a realistic, beginner-paced timeline that:
+>
+> - Includes built-in **buffer/slack time** for debugging or unexpected busy days.
+> - Marks a clear **"finish line" (minimum viable version)** so I still have a working project to showcase even if I run short on time or a feature feels too tricky.
+> - Leaves a little time at the end to polish it with sample demo data so it looks great to show off.”
+
+---
+
 ### Projects from previous semesters
 
 - [WhattaCook](https://github.com/katamatata/katamatata.github.io)
